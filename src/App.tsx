@@ -1,12 +1,47 @@
-import React, { useState } from 'react';
+import React, { FormEvent, useRef, useState } from 'react';
 import { Briefcase, Code, Database, MessageSquare, Award, GraduationCap, ChevronDown, ExternalLink, Github } from 'lucide-react';
 import ContactModal from './ContactModal';
+import emailjs from '@emailjs/browser';
+import toast, { Toaster } from 'react-hot-toast';
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    
+    if (!formRef.current) return;
+
+    try {
+      setIsSubmitting(true);
+      
+      const result = await emailjs.sendForm(
+        'service_0n1h0op',
+        'template_4xx45u8',
+        formRef.current,
+        'ZKPu41UmtOveXFwmj'
+      );
+      
+      if (result.text === 'OK') {
+        toast.success('Mensagem enviada com sucesso!');
+        formRef.current.reset();
+        setIsModalOpen(false);
+      }
+    } catch (error) {
+      toast.error('Erro: Esqueci de pagar os e-mails KAKSKASKAKSAKS');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
-<div className="min-h-screen bg-[url('/teste1.png')]  bg-cover bg-center text-white p-4 md:p-8 font-sans">
-  <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-    <div className="h-screen relative flex flex-col items-center justify-center p-4 md:p-8">
+<div className="min-h-screen bg-[url('/teste1.png')] bg-[length:100%_100%] bg-cover bg-center text-white p-4 md:p-8 font-sans">
+ <ContactModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        formRef={formRef}
+        onSubmit={handleSubmit}
+        isSubmitting={isSubmitting}
+      />    <div className="h-screen relative flex flex-col items-center justify-center p-4 md:p-8">
         <div className="text-center space-y-6">
           <h1 className="text-6xl md:text-8xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-200">
             Gabriel Vinícius
@@ -360,3 +395,7 @@ export default App;
 function setIsModalOpen(arg0: boolean): void {
   throw new Error('Function not implemented.');
 }
+function setIsSubmitting(arg0: boolean) {
+  throw new Error('Function not implemented.');
+}
+

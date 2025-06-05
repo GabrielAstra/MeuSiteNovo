@@ -1,13 +1,16 @@
 // src/components/ContactModal.tsx
-import React from 'react';
+import React, { FormEvent, RefObject } from 'react';
 import { Mail, Phone, MapPin, X } from 'lucide-react';
 
 interface ContactModalProps {
   isOpen: boolean;
   onClose: () => void;
+  formRef: RefObject<HTMLFormElement>;
+  onSubmit: (e: FormEvent) => void;
+  isSubmitting: boolean;
 }
 
-const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
+const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, formRef, onSubmit, isSubmitting }) => {
   if (!isOpen) return null;
 
   return (
@@ -23,7 +26,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
         <h3 className="text-2xl font-bold mb-6 text-center">Entre em Contato</h3>
 
         <div className="space-y-6">
-          <div className="flex items-center gap-4 p-4 bg-white/5 rounded-lg">
+         <div className="flex items-center gap-4 p-4 bg-white/5 rounded-lg">
             <Mail className="text-purple-400 flex-shrink-0" />
             <div>
               <p className="font-medium">Email</p>
@@ -51,33 +54,42 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
             </div>
           </div>
 
-          <form className="space-y-4">
+          <form ref={formRef} onSubmit={onSubmit} className="space-y-4">
             <div>
               <input
                 type="text"
+                name="user_name"
                 placeholder="Seu Nome"
+                required
                 className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-purple-400 transition-colors placeholder-white/50"
               />
             </div>
             <div>
               <input
                 type="email"
+                name="user_email"
                 placeholder="Seu Email"
+                required
                 className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-purple-400 transition-colors placeholder-white/50"
               />
             </div>
             <div>
               <textarea
+                name="message"
                 placeholder="Sua Mensagem"
                 rows={4}
+                required
                 className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-purple-400 transition-colors placeholder-white/50 resize-none"
               ></textarea>
             </div>
             <button
               type="submit"
-              className="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg text-white font-semibold shadow-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300"
+              disabled={isSubmitting}
+              className={`w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg text-white font-semibold shadow-lg transition-all duration-300 ${
+                isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:from-purple-700 hover:to-indigo-700'
+              }`}
             >
-              Enviar Mensagem
+              {isSubmitting ? 'Enviando...' : 'Enviar Mensagem'}
             </button>
           </form>
         </div>
