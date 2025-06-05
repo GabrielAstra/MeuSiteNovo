@@ -34,7 +34,7 @@ function App() {
     }
   };
   return (
-<div className="min-h-screen bg-[url('/teste1.png')] bg-[length:100%_100%] bg-cover bg-center text-white p-4 md:p-8 font-sans">
+<div className="min-h-screen bg-[url('/teste1.png')] bg-fixed bg-cover bg-center text-white p-4 md:p-8 font-sans">
  <ContactModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
@@ -268,7 +268,7 @@ function App() {
                     <span className="px-2 py-1 bg-purple-900/50 rounded-md text-xs font-medium">PostgreSql</span>
                   </div>
                   <div className="flex gap-4">
-                    <a href="#" className="flex items-center gap-2 text-purple-300 hover:text-white transition-colors">
+                    <a href="" className="flex items-center gap-2 text-purple-300 hover:text-white transition-colors">
                       <Github size={18} />
                       <span>Código</span>
                     </a>
