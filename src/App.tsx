@@ -600,8 +600,8 @@ function App() {
                 <Mail className="text-white flex-shrink-0 group-hover:scale-110 transition-transform" />
                 <div>
                   <p className="font-medium">Email</p>
-                  <a href="mailto:gabriel.silva@email.com" className="text-gray-300 hover:text-white transition-colors">
-                    gabriel.silva@email.com
+                  <a href="mailto:gvlc2013@gmail.com" className="text-gray-300 hover:text-white transition-colors">
+                    gvlc2013@gmail.com
                   </a>
                 </div>
               </div>
@@ -610,8 +610,8 @@ function App() {
                 <Phone className="text-white flex-shrink-0 group-hover:scale-110 transition-transform" />
                 <div>
                   <p className="font-medium">Telefone</p>
-                  <a href="tel:+5511999999999" className="text-gray-300 hover:text-white transition-colors">
-                    +55 (11) 99999-9999
+                  <a href="tel:+5561985623626" className="text-gray-300 hover:text-white transition-colors">
+                    +55 (61) 98562-3626
                   </a>
                 </div>
               </div>
@@ -620,7 +620,7 @@ function App() {
                 <MapPin className="text-white flex-shrink-0 group-hover:scale-110 transition-transform" />
                 <div>
                   <p className="font-medium">Localização</p>
-                  <p className="text-gray-300">São Paulo, SP - Brasil</p>
+                  <p className="text-gray-300">Brasília, DF - Brasil</p>
                 </div>
               </div>
               
