@@ -477,11 +477,11 @@ function App() {
                       <span className="px-2 py-1 bg-white/10 rounded-md text-xs font-medium hover:bg-white/20 transition-colors">ASP.NET</span>
                     </div>
                     <div className="flex gap-4">
-                      <a href="#" className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors group/link">
+                      <a href="https://github.com/GabrielAstra/BogusExample" target="_blank" className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors group/link">
                         <Github size={18} className="group-hover/link:rotate-12 transition-transform" />
                         <span>Código</span>
                       </a>
-                      <a href="#" className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors group/link">
+                      <a href="" title="Sem desmonstração. (No momento)" className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors group/link">
                         <ExternalLink size={18} className="group-hover/link:rotate-12 transition-transform" />
                         <span>Demo</span>
                       </a>
