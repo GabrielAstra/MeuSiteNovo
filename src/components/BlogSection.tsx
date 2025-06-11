@@ -26,7 +26,7 @@ const blogPosts: BlogPost[] = [
     readTime: "8 min",
     category: "Arquitetura",
     tags: [".NET", "Clean Architecture", "Design Patterns"],
-    image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
+    image: "/netArch.jpg",
     views: 1250,
     likes: 89,
     comments: 23
