@@ -433,15 +433,15 @@ function App() {
                 <div className="group bg-black/60 backdrop-blur-md rounded-xl overflow-hidden border border-white/20 shadow-xl transition-all duration-500 hover:transform hover:scale-[1.02] hover:shadow-white/10">
                   <div className="h-48 relative overflow-hidden">
                     <img 
-                      src="/discipulus.PNG" 
-                      alt="Discipulus" 
+                      src="/ytbDown.png" 
+                      alt="YTBDownload" 
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent group-hover:from-black/50 transition-all duration-300"></div>
                   </div>
                   <div className="p-6">
-                    <h4 className="text-xl font-semibold mb-2 group-hover:text-gray-300 transition-colors">Discipulus</h4>
-                    <p className="text-gray-300 mb-4">Site para aula de reforços online, onde o usuário pode criar uma conta e contratar um professor da matéria desejada.</p>
+                    <h4 className="text-xl font-semibold mb-2 group-hover:text-gray-300 transition-colors">Download Youtube</h4>
+                    <p className="text-gray-300 mb-4">Site para download de áudio e vídeos do YouTube. Ele salva o histórico e baixa em até 720p.</p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       <span className="px-2 py-1 bg-white/10 rounded-md text-xs font-medium hover:bg-white/20 transition-colors">.NET Core</span>
                       <span className="px-2 py-1 bg-white/10 rounded-md text-xs font-medium hover:bg-white/20 transition-colors">Flutter</span>
