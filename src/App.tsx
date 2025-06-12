@@ -443,10 +443,8 @@ function App() {
                     <h4 className="text-xl font-semibold mb-2 group-hover:text-gray-300 transition-colors">Download Youtube</h4>
                     <p className="text-gray-300 mb-4">Site para download de áudio e vídeos do YouTube. Ele salva o histórico e baixa em até 720p.</p>
                     <div className="flex flex-wrap gap-2 mb-4">
-                      <span className="px-2 py-1 bg-white/10 rounded-md text-xs font-medium hover:bg-white/20 transition-colors">.NET Core</span>
-                      <span className="px-2 py-1 bg-white/10 rounded-md text-xs font-medium hover:bg-white/20 transition-colors">Flutter</span>
-                      <span className="px-2 py-1 bg-white/10 rounded-md text-xs font-medium hover:bg-white/20 transition-colors">PostgreSql</span>
-                      <span className="px-2 py-1 bg-white/10 rounded-md text-xs font-medium hover:bg-white/20 transition-colors">Docker</span>                    </div>
+                      <span className="px-2 py-1 bg-white/10 rounded-md text-xs font-medium hover:bg-white/20 transition-colors">Asp.NET</span>
+                                        </div>
                     <div className="flex gap-4">
                       <a href="https://github.com/GabrielAstra/YtbDownlMvc" target="_blank" className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors group/link">
                         <Github size={18} className="group-hover/link:rotate-12 transition-transform" />
